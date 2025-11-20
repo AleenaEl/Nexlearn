@@ -1,36 +1,125 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NexLearn – Online MCQ Exam Platform  
+A fully responsive and production-ready online examination platform built using **Next.js**, **Redux Toolkit**, **React Query**, **TailwindCSS**, and **JWT Authentication**.
 
-## Getting Started
+This project was developed as part of a front-end machine test and includes real API integration, auto-submit exam timer, responsive UI, and state-managed workflows.
 
-First, run the development server:
+---
 
+## 🚀 Features
+
+### ✅ **Authentication**
+- OTP-based login using real API  
+- JWT access token  handling   
+- Logout API implemented
+
+---
+
+### 🧪 **Exam Module**
+- Fetches live questions from API  
+- Displays MCQs with comprehension, images, and options  
+- Tracks:
+  - Answered  
+  - Not Answered  
+  - Marked for Review  
+  - Visited Questions  
+
+- Question Palette with color indicators  
+- Auto-save answers  
+- Fully responsive (mobile, tablet, desktop)
+
+---
+
+### ⏳ **Advanced Timer System**
+- Starts when user begins the exam  
+- Uses **localStorage + Redux** to persist time even if page is refreshed  
+- Auto-submits the exam when time reaches **00:00**  
+- Timer displayed inside QuestionPalette
+
+---
+
+### 📤 **Submit & Result**
+- Submits answers as **FormData** to API  
+- Receives exam score, correct answers, incorrect, not attended  
+- Result page with summary and icons  
+- State preserved using Redux
+
+---
+
+### 🎨 **UI/UX**
+- Built using **TailwindCSS** + custom components  
+- Pixel-perfect Figma implementation  
+- Clean layout with semantic HTML  
+- Accessible and keyboard friendly
+
+---
+
+### 🔍 **SEO Optimization**
+- Added metadata, keywords, robots, favicon  
+- Semantic HTML structure  
+- Fast and optimized rendering
+
+---
+
+### ⚙️ **Tech Stack**
+- Next.js 14 (App Router)
+- React 18
+- Redux Toolkit
+- React Query (TanStack)
+- Axios with interceptors
+- TailwindCSS
+- Lucide Icons
+- react-hot-toast
+
+---
+
+## 📁 Folder Structure (Important)
+src/
+├─ app/
+│ ├─ exam/
+│ │ ├─ instructions/
+│ │ ├─ test/
+│ │ └─ result/
+│ ├─ layout.js
+│ └─ page.js
+├─ components/
+│ ├─ test/
+│ │ ├─ QuestionBlock/
+│ │ ├─ QuestionPalette/
+│ │ └─ SubmitDialog/
+│ ├─ Timer/
+│ └─ Navbar/
+├─ redux/
+│ ├─ examSlice.js
+│ ├─ examResultSlice.js
+│ └─ ReduxProvider.js
+├─ services/
+│ └─ examServices.js
+├─ providers/
+│ └─ QueryProvider.js
+├─ assets/
+└─ utils/
+
+## 📦 Installation & Setup
+
+### 1️⃣ Clone the repo
+```bash
+git clone <your-repository-url>
+cd nexlearn
+```
+### 2️⃣ Install dependencies
+```bash
+npm install
+```
+### 3️⃣ Environment Variables
+```bash
+Create .env.local
+NEXT_PUBLIC_API_URL="baseurl"
+```
+###4️⃣ Run project
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+📄 License
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is created solely for assessment and educational purposes.
+It is not intended for production use.
