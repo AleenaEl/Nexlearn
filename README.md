@@ -103,7 +103,7 @@ src/
 
 ### 1️⃣ Clone the repo
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/AleenaEl/Nexlearn
 cd nexlearn
 ```
 ### 2️⃣ Install dependencies
