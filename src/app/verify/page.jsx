@@ -56,12 +56,12 @@ export default function Verify() {
             {step === 2 && (
               <OtpForm
                               mobile={mobile}
-                              onVerify={()=> setStep(3)}
-                // onVerify={(flow) => {
-                //   if (flow === "login") handleinst();
-                //   if (flow === "new-user") handleadddetails();
-                //   if (flow === "resend-otp") handlesetp1();
-                // }}
+                              // onVerify={()=> setStep(3)}
+                onVerify={(flow) => {
+                  if (flow === "login") handleinst();
+                  if (flow === "new-user") handleadddetails();
+                  if (flow === "resend-otp") handlesetp1();
+                }}
               />
             )}
             {step === 3 && <AddDetailsForm mobile={mobile} />}
