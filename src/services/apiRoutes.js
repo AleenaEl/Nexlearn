@@ -1,0 +1,6 @@
+export const otpsend ="/auth/send-otp"
+export const otpverify = "/auth/verify-otp"
+export const profile = "/auth/create-profile"
+export const qnlist = "/question/list"
+export const submitExam = "/answers/submit"
+export const logout ="/auth/logout"
